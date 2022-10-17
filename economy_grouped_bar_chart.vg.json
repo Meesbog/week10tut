@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 115,
+    "height": 230,
+    "background": null,
+  "data": {
+    "values": [
+      {"category":"China", "group": "Export", "value":18.5},
+      {"category":"China", "group": "Import", "value":16},
+      {"category":"Germany", "group": "Import", "value":37.7},
+      {"category":"Germany", "group": "Export", "value":43.4},
+      {"category":"India", "group": "Import", "value":19.1},
+      {"category":"India", "group": "Export", "value":18.7},
+      {"category":"Japan", "group": "Import", "value":15.8},
+      {"category":"Japan", "group": "Export", "value":15.6},
+      {"category":"United Kingdom", "group": "Import", "value":28.1},
+      {"category":"United Kingdom", "group": "Export", "value":28.4},
+      {"category":"United States", "group": "Import", "value":13.3},
+      {"category":"United States", "group": "Export", "value":10.2}
+    ]
+  },
+ "mark": "bar",
+
+  "encoding": {
+    "column": {"field": "category", "header": {"orient": "bottom"}, "title":null},
+    "y": {"field": "value", "type": "quantitative", "title":null},
+    "x": {"field": "group", "axis": null},
+    "color": {"field": "group", "scale": {"range":["#FF99FF", "#66CCFF"]}, "title": null,"legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "legendX": 0,
+      "legendY": 300,
+      "title": null
+    }
+  },
+  "mark": {
+    "type": "text",
+    "dy": -10
+  },
+  "encoding": {
+    "text": {"field": "Country", "type": "nominal"}
+  },
+  "config": {"view": {"stroke": "transparent"}},
+  "tooltip": [
+    {"field": "value", "type": "quantitative"}
+]}}
